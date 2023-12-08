@@ -31,7 +31,7 @@ body
     font-weight: 600;
     cursor: default;
     opacity: 0;
-    animation: slideRight is ease forwards;
+    animation: slideRight 1s ease forwards;
 }
 .navbar a {
     display: inline-block;
@@ -64,6 +64,9 @@ body
 .home-content h3 {
     font-size: 25px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
@@ -74,9 +77,15 @@ body
 .home-content h1 {
     font-size: 35px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 }
 .home-content p {
     font-size: 15px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 .home-sci a {
     display: inline-flex;
@@ -91,6 +100,9 @@ body
     color: #0ef;
     text-decoration: none;
     margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.5s;
 }
 .home-sci a:hover {
     background: #0ef;
@@ -120,6 +132,36 @@ body
     }
     100%{
         transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
         opacity: 1;
     }
 }
