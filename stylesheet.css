@@ -8,6 +8,7 @@
 body
 {
     color: #ededed;
+    background: #081b29;
 }
 .header
 {
@@ -16,7 +17,7 @@ body
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: #051129;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +43,8 @@ body
     margin-left: 30px;
     transition: .3s;
     opacity: 0;
-    animation: slideTop .5s ease forwards;
+    animation: slideLeft .7s ease forwards;
+    animation-delay: calc(.4s * var(--i));
 }
 .navbar a:hover{
     color: #0ef;
@@ -57,6 +59,7 @@ body
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
+    
 }
 .home-content{
     max-width: 600px;
@@ -70,6 +73,8 @@ body
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3 span {
     color: #0ef;
@@ -101,8 +106,8 @@ body
     text-decoration: none;
     margin: 30px 15px 30px 0;
     opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1.5s;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
 }
 .home-sci a:hover {
     background: #0ef;
@@ -119,12 +124,67 @@ body
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
 }
 .btn-box:hover {
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0 0 200px cyan;
 }
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: #0ef;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes slideRight {
     0%{
         transform: translateX(-100px);
